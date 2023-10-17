@@ -12,6 +12,7 @@ use Exception;
 use GuzzleHttp\Client;
 use shopify\models\Settings;
 use yii\base\Component;
+use Craft;
 
 class ShopifyService extends Component
 {
@@ -253,6 +254,7 @@ class ShopifyService extends Component
 
             $response = $client->request('GET', $url, [
                 // 'debug' => true
+                'delay' => Craft::$app->getConfig()->getGeneral()->shopifyRateDelay ?? 600
             ]);
 
             if ($response->getStatusCode() !== 200) {
