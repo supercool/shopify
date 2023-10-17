@@ -1,5 +1,5 @@
 {
-    "name": "nmaier95/shopify-product-fetcher",
+    "name": "supercool/shopify",
     "description": "load your shopify-products into your craft3 cms instance",
     "type": "craft-plugin",
     "version": "2.2.1",
